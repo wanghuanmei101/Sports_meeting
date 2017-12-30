@@ -6,9 +6,9 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`jeesite` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`sports` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 
-USE `jeesite`;
+USE `sports`;
 
 /*Table structure for table `ACT_GE_BYTEARRAY` */
 
@@ -1355,6 +1355,76 @@ CREATE TABLE `test_tree` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='树结构表';
 
 /*Data for the table `test_tree` */
+
+
+/*Table structure for table `player` */
+
+CREATE TABLE `player` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(32) DEFAULT NULL COMMENT '姓名',
+  `player_number`varchar(32) NOT NULL DEFAULT '' COMMENT '运动员号',
+  `age` int(3) NOT NULL COMMENT '年龄',
+  `sex` varchar(4) NOT NULL COMMENT '性别',
+  `college_id` int(2) NOT NULL COMMENT '学院号',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='运动员表';
+
+/*Data for the table `player` */
+
+
+
+/*Table structure for table `referee` */
+
+CREATE TABLE `referee` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(32) DEFAULT NULL COMMENT '姓名',
+  `event_id` varchar(32) DEFAULT NULL COMMENT '比赛项目id',
+  `referee_number`varchar(32) NOT NULL DEFAULT '' COMMENT '裁判号',
+  `age` int(3) NOT NULL COMMENT '年龄',
+  `sex` varchar(4) NOT NULL COMMENT '性别',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='裁判表';
+
+/*Data for the table `referee` */
+
+
+/*Table structure for table `event` */
+
+CREATE TABLE `event` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `event_name` varchar(32) DEFAULT NULL COMMENT '项目名称',
+  `event_type` int(2) DEFAULT NULL COMMENT '项目类型',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='项目表';
+
+/*Data for the table `event` */
+
+
+/*Table structure for table `college` */
+
+CREATE TABLE `college` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `college_name` varchar(32) DEFAULT NULL COMMENT '项目名称',
+  `college_sum_report` decimal(8,3) DEFAULT NULL COMMENT '学院总成绩',
+  `college_sum_rank` int(4) DEFAULT NULL COMMENT '学院总名次',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='学院表';
+
+/*Data for the table `college` */
+
+/*Table structure for table `college` */
+
+CREATE TABLE `details` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `player_number`varchar(32) NOT NULL DEFAULT '' COMMENT '运动员号',
+  `event_id`int(4) NOT NULL DEFAULT '' COMMENT '项目号',
+  `report` decimal(8,3) NOT NULL DEFAULT '' COMMENT '成绩',
+  `integral` decimal(8,3) NOT NULL DEFAULT '' COMMENT '积分',
+  `rank` int(4) NOT NULL DEFAULT '' COMMENT '名次',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='比赛详情表';
+
+/*Data for the table `college` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

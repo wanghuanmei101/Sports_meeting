@@ -1359,6 +1359,8 @@ CREATE TABLE `test_tree` (
 
 /*Table structure for table `player` */
 
+DROP TABLE IF EXISTS `player`;
+
 CREATE TABLE `player` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(32) DEFAULT NULL COMMENT '姓名',
@@ -1375,6 +1377,8 @@ CREATE TABLE `player` (
 
 /*Table structure for table `referee` */
 
+DROP TABLE IF EXISTS `referee`;
+
 CREATE TABLE `referee` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(32) DEFAULT NULL COMMENT '姓名',
@@ -1390,6 +1394,8 @@ CREATE TABLE `referee` (
 
 /*Table structure for table `event` */
 
+DROP TABLE IF EXISTS `event`;
+
 CREATE TABLE `event` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `event_name` varchar(32) DEFAULT NULL COMMENT '项目名称',
@@ -1402,6 +1408,8 @@ CREATE TABLE `event` (
 
 /*Table structure for table `college` */
 
+DROP TABLE IF EXISTS `college`;
+
 CREATE TABLE `college` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `college_name` varchar(32) DEFAULT NULL COMMENT '项目名称',
@@ -1413,6 +1421,8 @@ CREATE TABLE `college` (
 /*Data for the table `college` */
 
 /*Table structure for table `college` */
+
+DROP TABLE IF EXISTS `details`;
 
 CREATE TABLE `details` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,

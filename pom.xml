@@ -3,6 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
+
 	<groupId>com.thinkgem.jeesite</groupId>
 	<artifactId>jeesite</artifactId>
 	<version>1.2.7</version>
@@ -12,7 +13,7 @@
 	<url>http://thinkgem.github.com/jeesite</url>
 	<inceptionYear>2012-2016</inceptionYear>
 	
-	<!-- 项目属性 -->
+	<!-- 项目属�?-->
 	<properties>
 		
 		<!-- main version setting -->
@@ -57,7 +58,7 @@
 		
 	</properties>
 	
-	<!-- 设定主仓库，按设定顺序进行查找。 -->
+	<!-- 设定主仓库，按设定顺序进行查找�?-->
 	<repositories>
 	
 		<repository>
@@ -79,7 +80,7 @@
 		
 	</pluginRepositories> 
 	
-	<!-- 依赖项定义 -->
+	<!-- 依赖项定�?-->
 	<dependencies>
 	
 		<!-- SPRING begin -->
@@ -599,7 +600,7 @@
 			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/UserAgentUtils-1.13.jar</systemPath>
 		</dependency>
 		
-		<!-- 自定义jar依赖包
+		<!-- 自定义jar依赖�?
 		<dependency>
 			<groupId>com.thinkgem.jeesite</groupId>
 			<artifactId>test-core</artifactId>
@@ -642,7 +643,7 @@
 				</configuration>
 			</plugin>
 			
-			<!-- JSP 预编译插件  jspweb.xml
+			<!-- JSP 预编译插�? jspweb.xml
 			<plugin>
 				<groupId>org.jasig.mojo.jspc</groupId>
 				<artifactId>jspc-maven-plugin</artifactId>
@@ -666,7 +667,7 @@
 				</dependencies>
 			</plugin>-->
 			
-			<!-- Jetty JSP 预编译插件  web.xml
+			<!-- Jetty JSP 预编译插�? web.xml
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-jspc-maven-plugin</artifactId>
@@ -973,7 +974,7 @@
 		</profile>
 	</profiles>
 	
-	<!-- 开发者信息 -->
+	<!-- 开发者信�?-->
 	<developers>  
 		<developer>
 			<id>thinkgem</id>
